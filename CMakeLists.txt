@@ -20,18 +20,16 @@
 #  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 #  THE SOFTWARE.
 
-cmake_minimum_required(VERSION 3.0)
-project(NMEA2000)
+set(sources
+        ./src/NMEA2000.cpp
+        ./src/N2kGroupFunction.cpp
+        ./src/N2kGroupFunctionDefaultHandlers.cpp
+        ./src/N2kMsg.cpp
+        ./src/N2kStream.cpp
+        ./src/N2kMessages.cpp
+        ./src/N2kTimer.cpp
+        )
 
-add_compile_options(
-  -Wall
-  -Werror
-  -std=c++11
-  -g
-)
-
-enable_testing()
-
-add_subdirectory(src)
-add_subdirectory(third-party/catch)
-add_subdirectory(test)
+idf_component_register(SRCS ${sources}
+        INCLUDE_DIRS ./src
+        )

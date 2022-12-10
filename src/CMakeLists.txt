@@ -23,11 +23,12 @@
 
 
 add_library(nmea2000
-  N2kMsg.cpp
-  N2kStream.cpp
-  N2kMessages.cpp
-  N2kTimer.cpp
-  Seasmart.cpp
+    NMEA2000.cpp
+    N2kMsg.cpp
+    N2kStream.cpp
+    N2kMessages.cpp
+    N2kTimer.cpp
+    Seasmart.cpp
 )
 
 target_include_directories(nmea2000
