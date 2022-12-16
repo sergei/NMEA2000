@@ -823,7 +823,7 @@ enum tN2kPGNList {N2kpgnl_transmit=0, N2kpgnl_receive=1 };
 //*****************************************************************************
 // PGN List (Transmit and Receive)
 // List of PGNs must be null terminated and
-// defined as PROGMEM e.g. const unsigned long TransmitMessages[] PROGMEM={130310L,0};
+// defined as PROGMEM e.g. const unsigned long TX_PGNS[] PROGMEM={130310L,0};
 void SetN2kPGN126464(tN2kMsg &N2kMsg, uint8_t Destination, tN2kPGNList tr, const unsigned long *PGNs);
 
 inline void SetN2kPGNTransmitList(tN2kMsg &N2kMsg, uint8_t Destination, const unsigned long *PGNs) {

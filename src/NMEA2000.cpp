@@ -25,18 +25,22 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "N2kDef.h"
 #if !defined(N2K_NO_GROUP_FUNCTION_SUPPORT)
 #include "N2kGroupFunctionDefaultHandlers.h"
+#include "../../../main/ESP32N2kStream.h"
+
 #endif
 #include <string.h>
 #include <stdlib.h>
 
-#define DebugStream Serial
 
-// #define NMEA2000_FRAME_ERROR_DEBUG
-// #define NMEA2000_FRAME_IN_DEBUG
-// #define NMEA2000_FRAME_OUT_DEBUG
-// #define NMEA2000_MSG_DEBUG
-// #define NMEA2000_BUF_DEBUG
-// #define NMEA2000_DEBUG
+ESP32N2kStream DebugStream;
+//#define DebugStream Serial
+
+ #define NMEA2000_FRAME_ERROR_DEBUG
+ #define NMEA2000_FRAME_IN_DEBUG
+ #define NMEA2000_FRAME_OUT_DEBUG
+ #define NMEA2000_MSG_DEBUG
+ #define NMEA2000_BUF_DEBUG
+ #define NMEA2000_DEBUG
 
 #if defined(NMEA2000_FRAME_ERROR_DEBUG)
 # define N2kFrameErrDbgStart(fmt, args...) DebugStream.print(N2kMillis()); DebugStream.print(": "); DebugStream.print (fmt , ## args)
