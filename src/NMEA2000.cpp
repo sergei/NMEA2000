@@ -25,7 +25,7 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "N2kDef.h"
 #if !defined(N2K_NO_GROUP_FUNCTION_SUPPORT)
 #include "N2kGroupFunctionDefaultHandlers.h"
-#include "../../../main/ESP32N2kStream.h"
+#include "../../NMEA2000_utils/ESP32N2kStream.h"
 
 #endif
 #include <string.h>
